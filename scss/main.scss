@@ -38,12 +38,18 @@ body {
 // align-content determines the spacing between lines
 // align-items determines how the items as a whole are aligned within the container.
 
+// gap only applies spacing between items, not outer edge
+// minimum gutter. if space between, for eg, is bigger, it wins
+
 .container {
 	background-color: hotpink;
 	padding: 10px;
 	width: 80vw;
 	height: 80vh;
 	overflow: hidden;
+
+	// flex properties below
+
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -51,6 +57,10 @@ body {
 	justify-content: center;
 	align-items: center;
 	align-content: space;
+	// gap: 70px;
+	gap: 50px 20px;
+	// row-gap: 70px;
+	//column-gap: 70px;
 }
 
 .item {

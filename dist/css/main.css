@@ -45,6 +45,7 @@ body {
           align-items: center;
   -ms-flex-line-pack: space;
       align-content: space;
+  gap: 50px 20px;
 }
 
 .item {
