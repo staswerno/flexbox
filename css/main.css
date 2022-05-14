@@ -7,7 +7,7 @@
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: lightgray;
+  background-color: whitesmoke;
   color: hotpink;
   height: 100vh;
   font-size: xx-large;
@@ -35,8 +35,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -49,7 +49,6 @@ body {
 }
 
 .item {
-  min-width: 200px;
   height: 200px;
   margin: 10px;
   background-color: aquamarine;
@@ -62,8 +61,37 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  /* default auto */
+}
+
+#item1 {
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+  /* default 1 */
+}
+
+#item2 {
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+  /* default 1 */
 }
 
 #item3 {
   min-height: 300px;
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
+  /* default 0 */
+}
+
+#item4 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 250px;
+          flex: 0 1 250px;
+  /* 0 1 auto */
 }
