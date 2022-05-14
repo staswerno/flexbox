@@ -16,30 +16,53 @@ body {
 }
 
 // container properties
+
 // flex-direction: row | row-reverse | column | column-reverse
 // flex-wrap: nowrap | wrap | wrap-reverse
 // flex flow is shorthand for direction and wrap
+
 // justify-content: flex-start | flex-end | center | space-between
 // | space-around | space-evenly | start | end | left | right ... + safe | unsafe;
+// safest browser compatible values are: flex-start | flex-end | center
+
+// align-items: stretch | flex-start | flex-end | center | baseline
+// | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;
+
+// align-content: flex-start | flex-end | center | space-between
+// | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe;
+// align content only works on multi line
+
+// to understand align items vs align content, set:
+// align-items: center && align-content: space around
+// and comment in/out align-items
+// align-content determines the spacing between lines
+// align-items determines how the items as a whole are aligned within the container.
 
 .container {
 	background-color: hotpink;
 	padding: 10px;
 	width: 80vw;
 	height: 80vh;
+	overflow: hidden;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	//	flex-flow: column wrap;
-	justify-content: space-between;
+	justify-content: center;
+	align-items: center;
+	align-content: space;
 }
 
 .item {
-	width: 200px;
+	min-width: 200px;
 	height: 200px;
 	margin: 10px;
 	background-color: aquamarine;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+#item3 {
+	min-height: 300px;
 }

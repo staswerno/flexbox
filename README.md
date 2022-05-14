@@ -39,3 +39,21 @@ main axis alignment
 - space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
 - space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren’t equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.
 - space-evenly: items are distributed so that the spacing between any two items (and the space to the edges) is equal.
+
+## align items
+
+cross axis alignment
+
+- stretch (default): stretch to fill the container (still respect min-width/max-width)
+- flex-start / start / self-start: items are placed at the start of the cross axis. The difference between these is subtle, and is about respecting the flex-direction rules or the writing-mode rules.
+- flex-end / end / self-end: items are placed at the end of the cross axis. The difference again is subtle and is about respecting flex-direction rules vs. writing-mode rules.
+- center: items are centered in the cross-axis
+- baseline: items are aligned such as their baselines align
+
+## align items vs align content
+
+source (with images): https://stackoverflow.com/questions/27539262/whats-the-difference-between-align-content-and-align-items
+
+"The align-items property of flex-box aligns the items inside a flex container along the cross axis just like justify-content does along the main axis. (For the default flex-direction: row the cross axis corresponds to vertical and the main axis corresponds to horizontal. With flex-direction: column those two are interchanged respectively).
+
+But align-content is for multi line flexible boxes. It has no effect when items are in a single line. It aligns the whole structure according to its value."
