@@ -83,6 +83,11 @@ body {
 // flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
 // default is 0 1 auto
 
+// align-self
+// individual item alignment
+// overrides default/align-items
+// align-self: auto | flex-start | flex-end | center | baseline | stretch
+
 .item {
 	//width: 200px;
 	height: 200px;
@@ -118,4 +123,5 @@ body {
 
 #item4 {
 	flex: 0 1 250px; /* 0 1 auto */
+	align-self: flex-end;
 }
