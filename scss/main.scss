@@ -51,9 +51,9 @@ body {
 	// flex properties below
 
 	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	//	flex-flow: column wrap;
+	//	flex-direction: row;
+	//	flex-wrap: nowrap;
+	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
 	align-content: space;
