@@ -6,7 +6,7 @@
 
 body {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	background-color: lightgray;
+	background-color: whitesmoke;
 	color: hotpink;
 	height: 100vh;
 	font-size: xx-large;
@@ -15,7 +15,7 @@ body {
 	align-items: center;
 }
 
-// container properties
+// parent/container properties
 
 // flex-direction: row | row-reverse | column | column-reverse
 // flex-wrap: nowrap | wrap | wrap-reverse
@@ -52,7 +52,7 @@ body {
 
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	//	flex-flow: column wrap;
 	justify-content: center;
 	align-items: center;
@@ -63,16 +63,59 @@ body {
 	//column-gap: 70px;
 }
 
+// children/item properties
+
+// order: 5; /* default is 0 */
+// items with same order revert to source order
+
+// flex-grow: 4; /* default 0 */
+// if all 1, all same. if one 2, will be double others.
+// neg numbers invalid
+
+// flex-shrink: 3; /* default 1 */
+
+// flex basis defines the default size of an element before the remaining space is distributed
+// can be length or keyword (auto)
+// flex-basis:  | auto; /* default auto */
+
+// flex - shorthand for grow, shrink and bases
+// use this over separate! adjusts sizes intelligently
+// flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+// default is 0 1 auto
+
 .item {
-	min-width: 200px;
+	//width: 200px;
 	height: 200px;
 	margin: 10px;
 	background-color: aquamarine;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	// flex item properties below
+
+	flex-basis: 200px; /* default auto */
+}
+
+#item1 {
+	// flex item properties below
+	flex-shrink: 2; /* default 1 */ // turn off container wrap to see
+}
+
+#item2 {
+	// flex item properties below
+	flex-shrink: 2; /* default 1 */ // turn off container wrap to see
 }
 
 #item3 {
 	min-height: 300px;
+
+	// flex item properties below
+
+	order: 5;
+	flex-grow: 4; /* default 0 */ // turn on container wrap to see
+}
+
+#item4 {
+	flex: 0 1 250px; /* 0 1 auto */
 }
