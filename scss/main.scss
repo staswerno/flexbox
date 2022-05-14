@@ -1,24 +1,34 @@
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	background-color: lightgray;
 	color: hotpink;
+	height: 100vh;
 	font-size: xx-large;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 // container properties
 // flex-direction: row | row-reverse | column | column-reverse
-// flex-wrap: nowrap | wrap | wrap-reverse;
+// flex-wrap: nowrap | wrap | wrap-reverse
+// flex flow is shorthand for direction and wrap
+//
 
 .container {
 	background-color: hotpink;
 	padding: 10px;
-	width: fit-content;
+	width: 80vw;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	//	flex-flow: column wrap;
 }
 
 .item {
